@@ -1,0 +1,24 @@
+pipeline {
+     agent any
+  
+     stages {
+         stage ('git'){
+          steps {
+             git branch: 'main', url: 'https://github.com/ananthselva/Docker-mysql.git'
+         }
+     }
+     
+     stage('build') {
+         steps {
+             echo 'build run'
+         }
+     } 
+     
+     stage('result') {
+         steps {
+             echo 'testing successfully'
+             
+         }
+      }
+    }
+}     
